@@ -1,0 +1,18 @@
+{
+  "server": {
+      "host": "community.fluidapp.io",
+      "port": 443,
+      "ssl": true
+  },
+  "composer": {
+      "suggestedUser": "admin",
+      "sso":"manual"
+  },
+  "bus": {
+      "host": "rabbitmq.olympe.io",
+      "path": "/mqtt",
+      "ssl": true,
+      "port": 443,
+      "vhost": "community"
+  }
+}

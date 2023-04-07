@@ -1,0 +1,41 @@
+{
+  "name": "olympe",
+  "main": "src/main.js",
+  "version": "1.0.0",
+  "scripts": {
+    "add": "npm install",
+    "postadd": "npx gulp rewrite && npm run reset",
+    "reset": "npx gulp reset --core.mode=safe",
+    "reset:debug": "npm run reset -- --dc.debug=true",
+    "snapshot": "npx gulp snapshot --core.mode=safe",
+    "check": "npx gulp check --core.mode=safe",
+    "upgrade": "npx gulp upgrade --core.mode=interactive",
+    "serve:draw": "npx webpack serve --config-name draw",
+    "serve:web": "npx webpack serve --config-name web",
+    "serve:node": "cd dist/node && node main.js",
+    "serve": "npm run serve:draw",
+    "preserve:node": "npm run build:node",
+    "build:web": "npx webpack --config-name web",
+    "build:node": "npx webpack --config-name node",
+    "build:draw": "npx webpack --config-name draw"
+  },
+  "devDependencies": {
+    "@olympeio/dev-tools": "2.3.0",
+    "@olympeio/draw": "2.3.2",
+    "webpack": "^5.58",
+    "webpack-cli": "^4.9",
+    "webpack-dev-server": "^4.3",
+    "webpack-import-glob-loader": "^1.6",
+    "clean-webpack-plugin": "^4.0",
+    "copy-webpack-plugin": "^9.0",
+    "generate-json-webpack-plugin": "^2.0",
+    "webpack-node-externals": "^3.0",
+    "source-map-loader": "^3.0",
+    "webpack-merge": "^5.8"
+  },
+  "dependencies": {
+    "@olympeio/runtime-web": "9.3.1",
+    "@olympeio/runtime-node": "9.3.1",
+    "@olympeio/core": "2.3.7"
+  }
+}
